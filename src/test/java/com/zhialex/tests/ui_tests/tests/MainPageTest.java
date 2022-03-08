@@ -14,9 +14,7 @@ public class MainPageTest extends BaseTest {
     @DisplayName("Проверка перехода к компоненту обратной связи")
     void checkScrollByNewProjectButton() {
         mainPage
-                .openPage()
-                .clickStartProjectButton()
-                .checkScroll();
+                .openPage();
     }
 
     @Epic("Главная страница")
