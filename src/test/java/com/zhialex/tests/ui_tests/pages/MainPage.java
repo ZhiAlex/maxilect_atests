@@ -16,15 +16,17 @@ public class MainPage extends BaseTest {
 
     private ElementsCollection solutionsButtons = $$(".row.home-solutions.home-solutions-full a");
 
-    @Step("Open page")
-    public void openPage() {
+    @Step("open page")
+    public MainPage openPage() {
         open("https://maxilect.ru/");
+        return this;
     }
 
     @Step("click 'Start your project' button")
-    public void clickStartProjectButton() {
+    public MainPage clickStartProjectButton() {
         startProjectButton.shouldBe(visible);
         startProjectButton.click();
+        return this;
     }
 
     @Step("check scroll to set name input")

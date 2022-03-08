@@ -2,17 +2,20 @@ package com.zhialex.tests.ui_tests.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.github.javafaker.Faker;
 import com.zhialex.tests.ui_tests.helpers.Attach;
+import com.zhialex.tests.ui_tests.pages.MainPage;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class BaseTest {
+
+    MainPage mainPage = new MainPage();
+    Faker faker = new Faker();
 
     @BeforeAll
     static void beforeAll() {
