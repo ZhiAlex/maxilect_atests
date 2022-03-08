@@ -6,7 +6,6 @@ import com.zhialex.tests.ui_tests.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
@@ -40,4 +39,5 @@ public class BaseTest {
         Attach.addVideo();
         closeWebDriver();
     }
+    //gradle test -Dbrowser='chrome_91.0' -Duser='user1' -Dpassword='1234'
 }

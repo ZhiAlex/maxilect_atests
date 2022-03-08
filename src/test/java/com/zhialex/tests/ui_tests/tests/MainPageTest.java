@@ -5,9 +5,7 @@ import io.qameta.allure.Epic;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-
-public class MainPageTest extends BaseTest{
+public class MainPageTest extends BaseTest {
 
     MainPage mainPage = new MainPage();
 
