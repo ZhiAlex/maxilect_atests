@@ -14,7 +14,6 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class BaseTest {
 
-    MainPage mainPage = new MainPage();
     Faker faker = new Faker();
 
     @BeforeAll
