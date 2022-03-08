@@ -34,7 +34,7 @@ public class MainPage extends BaseTest {
         $x("//input[@name='user-name']").shouldBe(visible);
     }
 
-    @Step("open solution and check is opened")
+    @Step("open solution and check text on page")
     public void openSolution(String solution, String resultText) {
         solutionsButtons.findBy(text(solution)).click();
         $x("(//div[@class='page-content']/p)[1]")
