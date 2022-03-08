@@ -14,7 +14,7 @@ public class MainPage extends BaseTest {
     CommunicationComponent communicationComponent = new CommunicationComponent();
 
     SelenideElement
-            startProjectButton = $x("//a[contains(text(),'Начать проект')]");
+            startProjectButton = $x("//a[contains(text(),'Start your project')]");
 
     ElementsCollection solutionsButtons = $$(".row.home-solutions.home-solutions-full a");
 

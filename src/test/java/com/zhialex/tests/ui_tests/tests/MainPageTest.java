@@ -14,7 +14,6 @@ public class MainPageTest extends BaseTest {
     @Test
     @DisplayName("Проверка отправки контактов без проверка на человека")
     void checkScrollByNewProjectButton() {
-        Configuration.browserSize = "1920x1080";
         mainPage
                 .openPage()
                 .clickStartProjectButton();
@@ -27,7 +26,7 @@ public class MainPageTest extends BaseTest {
 
         mainPage
                 .openPage()
-                .openSolution("Автоматизация тестирования", "В настоящее время все больше компаний" +
-                        "осознают важность автоматизации процесса контроля качества");
+                .openSolution("QA Automation", "The importance of automated quality control" +
+                        " in facilitating the agile development");
     }
 }
