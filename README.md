@@ -1,6 +1,6 @@
 <a target="_blank" href="https://maxilect.com/">Сайт</a>
 
-##Технологии:
+#Технологии:
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="images/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="images/Java.svg" width="50" height="50"  alt="Java"/></a>
@@ -13,7 +13,7 @@
 <a href="https://github.com/allure-framework/allure2"><img src="images/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a>
 </p>
 
-##Удаленный запуск:
+#Удаленный запуск:
 ```bash
 clean
 test
@@ -22,5 +22,5 @@ test
 -Dpassword=${PASS}
 ```
 
-##<a target="_blank" href="https://jenkins.autotests.cloud/job/010_LomtikCat_maxilect/">Сборка в Jenkins</a>
-##<a target="_blank" href="https://jenkins.autotests.cloud/job/010_LomtikCat_maxilect/allure/">Allure отчёт</a>
+#<a target="_blank" href="https://jenkins.autotests.cloud/job/010_LomtikCat_maxilect/">Сборка в Jenkins</a>
+#<a target="_blank" href="https://jenkins.autotests.cloud/job/010_LomtikCat_maxilect/allure/">Allure отчёт</a>
