@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class BaseTest {
 
@@ -32,6 +34,7 @@ public class BaseTest {
         );
         Configuration.holdBrowserOpen = false;
         Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadStrategy = "eager";
     }
 
     @AfterEach
