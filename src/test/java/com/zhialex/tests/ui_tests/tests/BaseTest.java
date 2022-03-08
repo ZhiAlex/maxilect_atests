@@ -16,17 +16,19 @@ public class BaseTest {
     static void beforeAll() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
+        String browser = System.getProperty("browser", "chrome_91.0");
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-        capabilities.setCapability("browserName", System.getProperty("browser").split("_")[0]);
-        capabilities.setCapability("browserVersion", System.getProperty("browser").split("_")[1]);
+        capabilities.setCapability("browserName", browser.split("_")[0]);
+        capabilities.setCapability("browserVersion", browser.split("_")[1]);
 
         Configuration.browserCapabilities = capabilities;
         Configuration.remote = String.format(
                 "https://%s:%s@selenoid.autotests.cloud/wd/hub",
-                System.getProperty("user"),
-                System.getProperty("password")
+                System.getProperty("user", "user1"),
+                System.getProperty("password", "1234")
         );
         Configuration.holdBrowserOpen = false;
         Configuration.browserSize = "1920x1080";
