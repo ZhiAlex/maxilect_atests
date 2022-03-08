@@ -13,8 +13,10 @@ public class MainPageTest extends BaseTest {
     @Test
     @DisplayName("Проверка перехода к компоненту обратной связи")
     void checkScrollByNewProjectButton() {
-        mainPage
-                .openPage();
+
+        mainPage.openPage();
+        mainPage.clickStartProjectButton();
+        mainPage.checkScroll();
     }
 
     @Epic("Главная страница")
@@ -22,9 +24,8 @@ public class MainPageTest extends BaseTest {
     @DisplayName("Проверка перехода на решение автоматизации тестирования")
     void openAutotestsSolutions() {
 
-        mainPage
-                .openPage()
-                .openSolution("QA Automation", "The importance of automated quality control" +
+        mainPage.openPage();
+        mainPage.openSolution("QA Automation", "The importance of automated quality control" +
                         " in facilitating the agile development");
     }
 }
