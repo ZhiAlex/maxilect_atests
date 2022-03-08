@@ -6,11 +6,9 @@ import com.zhialex.tests.ui_tests.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
     @BeforeAll
@@ -31,11 +29,6 @@ public class BaseTest {
         );
         Configuration.holdBrowserOpen = false;
         Configuration.browserSize = "1920x1080";
-    }
-
-    @BeforeEach
-    void openSite() {
-        open("https://maxilect.ru/");
     }
 
     @AfterEach
