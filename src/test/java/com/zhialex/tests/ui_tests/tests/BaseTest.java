@@ -46,5 +46,4 @@ public class BaseTest {
         Attach.addVideo();
         closeWebDriver();
     }
-    //gradle test -Dbrowser='chrome_91.0' -Duser='user1' -Dpassword='1234'
 }
