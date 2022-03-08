@@ -15,9 +15,9 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class BaseTest {
 
-    CommunicationComponent communicationComponent = new CommunicationComponent();
     Faker faker = new Faker();
     MainPage mainPage = new MainPage();
+    CommunicationComponent communicationComponent = new CommunicationComponent();
 
     @BeforeAll
     static void setUp() {

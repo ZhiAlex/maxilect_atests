@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage extends BaseTest {
 
-    CommunicationComponent communicationComponent = new CommunicationComponent();
+//    CommunicationComponent communicationComponent = new CommunicationComponent();
 
     SelenideElement
             startProjectButton = $x("//a[contains(text(),'Start your project')]");
@@ -26,7 +26,8 @@ public class MainPage extends BaseTest {
     public void clickStartProjectButton() {
         startProjectButton.shouldBe(visible);
         startProjectButton.click();
-        communicationComponent.componentIsVisible();
+        $x("//input[@name='user-name']").shouldBe(visible);
+//        communicationComponent.componentIsVisible();
     }
 
     public void openSolution(String solution, String resultText) {
