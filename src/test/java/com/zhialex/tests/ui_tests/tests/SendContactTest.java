@@ -1,5 +1,8 @@
 package com.zhialex.tests.ui_tests.tests;
 
+import com.github.javafaker.Faker;
+import com.zhialex.tests.ui_tests.components.CommunicationComponent;
+import com.zhialex.tests.ui_tests.pages.MainPage;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -7,6 +10,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class SendContactTest extends BaseTest {
+
+
+    Faker faker = new Faker();
+    MainPage mainPage = new MainPage();
+    CommunicationComponent communicationComponent = new CommunicationComponent();
 
     @Epic("Отправка контактов")
     @Feature("Обработка ошибок")

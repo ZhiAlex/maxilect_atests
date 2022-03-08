@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class CommunicationComponent {
 
-    SelenideElement
+    private SelenideElement
             setNameInput = $x("//input[@name='user-name']"),
             setContactInput = $x("//input[@name='contact']"),
             setMessageTextArea = $x("//textarea[@name='message']"),

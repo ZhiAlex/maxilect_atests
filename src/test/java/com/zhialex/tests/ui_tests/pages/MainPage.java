@@ -2,7 +2,6 @@ package com.zhialex.tests.ui_tests.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import com.zhialex.tests.ui_tests.components.CommunicationComponent;
 import com.zhialex.tests.ui_tests.tests.BaseTest;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,12 +10,10 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage extends BaseTest {
 
-//    CommunicationComponent communicationComponent = new CommunicationComponent();
-
-    SelenideElement
+    private SelenideElement
             startProjectButton = $x("//a[contains(text(),'Start your project')]");
 
-    ElementsCollection solutionsButtons = $$(".row.home-solutions.home-solutions-full a");
+    private ElementsCollection solutionsButtons = $$(".row.home-solutions.home-solutions-full a");
 
     public MainPage openPage() {
         open("https://maxilect.ru/");
@@ -27,7 +24,6 @@ public class MainPage extends BaseTest {
         startProjectButton.shouldBe(visible);
         startProjectButton.click();
         $x("//input[@name='user-name']").shouldBe(visible);
-//        communicationComponent.componentIsVisible();
     }
 
     public void openSolution(String solution, String resultText) {
