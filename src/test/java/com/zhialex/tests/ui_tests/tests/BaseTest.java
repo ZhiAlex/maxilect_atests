@@ -35,7 +35,7 @@ public class BaseTest {
 
     @BeforeEach
     void openSite() {
-        open();
+        open("https://maxilect.ru/");
     }
 
     @AfterEach
