@@ -8,7 +8,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class SendContactTest {
+public class SendContactTest extends BaseTest {
 
     CommunicationComponent communicationComponent = new CommunicationComponent();
     Faker faker = new Faker();
