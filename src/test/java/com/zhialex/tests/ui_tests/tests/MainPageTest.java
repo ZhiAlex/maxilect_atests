@@ -1,11 +1,14 @@
 package com.zhialex.tests.ui_tests.tests;
 
+import com.codeborne.selenide.Configuration;
 import com.zhialex.tests.ui_tests.pages.MainPage;
 import io.qameta.allure.Epic;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class MainPageTest extends BaseTest {
+import static com.codeborne.selenide.Selenide.open;
+
+public class MainPageTest extends BaseTest{
 
     MainPage mainPage = new MainPage();
 
@@ -13,6 +16,7 @@ public class MainPageTest extends BaseTest {
     @Test
     @DisplayName("Проверка отправки контактов без проверка на человека")
     void checkScrollByNewProjectButton() {
+        Configuration.browserSize = "1920x1080";
 
 //        open("https://maxilect.ru/");
         mainPage.clickStartProjectButton();

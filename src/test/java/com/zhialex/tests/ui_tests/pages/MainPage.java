@@ -6,6 +6,7 @@ import com.zhialex.tests.ui_tests.components.CommunicationComponent;
 import com.zhialex.tests.ui_tests.tests.BaseTest;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -19,7 +20,8 @@ public class MainPage extends BaseTest {
     ElementsCollection solutionsButtons = $$(".row.home-solutions.home-solutions-full a");
 
     public void clickStartProjectButton() {
-        startProjectButton.scrollTo().click();
+        startProjectButton.shouldBe(visible);
+        startProjectButton.click();
         communicationComponent.componentIsVisible();
     }
 
