@@ -19,6 +19,9 @@ public class MainPage extends BaseTest {
     @Step("Open page")
     public MainPage openPage() {
         open("https://maxilect.ru/");
+        startProjectButton.shouldBe(visible);
+        startProjectButton.click();
+        $x("//input[@name='user-name']").shouldBe(visible);
         return this;
     }
 
